@@ -1,0 +1,152 @@
+<body class="animsition">
+
+  <!--Main layout-->
+  <main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <img src="<%=product.imagePath%>" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <!--Content-->
+          <div class="p-4">
+			<h2 class="mtext-105 cl2 js-name-detail p-b-14 modal-productname" id="data_productname" value="	<%= product.productname %>">
+			</h2>
+			<!--Content-->
+			<div class="p-t-33">
+				<div class="flex-w flex-r-m p-b-10 modal-detail">
+					<div class="size-203 modal-detail-textsize">
+						Giá:
+					</div>
+					<div class="size-204 respon6-next">
+						<div id="data_price" class="data-text modal-detail-textsize">	</div>
+					</div>
+				</div>
+				<div class="flex-w flex-r-m p-b-10 modal-detail">
+					<div class="size-203 modal-detail-textsize">
+						Mặt hàng:
+					</div>
+					<div class="size-204 respon6-next">
+						<div id="data_category" class="data-text modal-detail-textsize">	</div>
+					</div>
+				</div>
+				<div class="flex-w flex-r-m p-b-10 modal-detail">
+					<div class="size-203 modal-detail-textsize ">
+						Chi tiết:
+					</div>
+					<div class="size-204 respon6-next">
+						<div id="data_price" class="data-text modal-detail-textsize">	</div>
+					</div>
+				</div>
+				<div class="flex-w flex-r-m p-b-10 modal-detail">
+					<div class="size-203 modal-detail-textsize">
+						Số lượng:
+					</div>
+					<div class="size-204 flex-w flex-m respon6-next">
+						<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+							<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+								<i class="fs-16 zmdi zmdi-minus"></i>
+							</div>
+
+							<input class="mtext-104 cl3 txt-center num-product" type="number"
+								name="productNumber" id="productQuantity" value="1">
+
+							<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+								<i class="fs-16 zmdi zmdi-plus"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex-w p-b-10 modal-detail modal-review">
+					<div class="size-203 ">
+						<img src="/img/star.svg" alt="#" />
+						<img src="/img/star.svg" alt="#" />
+						<img src="/img/star.svg" alt="#" />
+						<img src="/img/star.svg" alt="#" />
+						<img src="/img/star.svg" alt="#" />
+					</div>
+					<div class="size-203  modal-text-review modal-detail-textsize">
+						| 10 Reviews
+					</div>
+				</div>
+
+				<div class="flex-w p-b-10 modal-cart-button">
+					<input type="hidden" id="productId" name="productId" value="<%=product._id%>">
+					<button onclick="postCartModal()"
+						class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15  modal-addtocart-button">
+						Thêm Vào Giỏ Hàng
+					</button>
+				</div>
+			</div>
+		</p>
+          </div>
+          <!--Content-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <hr>
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center wow fadeIn p-b-30">
+
+        <!--Grid column-->
+        <div class="col-md-6 text-center">
+
+          <h4 class="my-4 h4">Additional information</h4>
+
+          <p>Modern electronic commerce typically uses the World Wide Web for at least one part of the transaction's life cycle although it may also use other technologies such as e-mail. Typical e-commerce transactions include the purchase of online iPhone, Macbook, Airpods and Apple watch purchases.</p>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+          <img src="https://demo2.wpopal.com/x-street/wp-content/uploads/2018/12/products-7-600x675.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="https://demo2.wpopal.com/x-street/wp-content/uploads/2018/12/products-1-600x675.jpg" class="img-fluid" alt="">
+
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://demo2.wpopal.com/x-street/wp-content/uploads/2018/12/products-9-600x675.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+  </main>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+</body>

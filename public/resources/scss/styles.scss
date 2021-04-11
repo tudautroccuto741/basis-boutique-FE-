@@ -1,0 +1,112 @@
+.header{
+  height: var(--header-height);
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+}
+
+
+.img-logo{
+  width: 80px;
+  height: 80px;
+}
+
+/*header with search*/
+.search-box
+{
+  background: var(--white-color);
+  margin-left: 20px;
+  border: 0 solid var(--white-color);
+  box-sizing: border-box;
+  border-radius: 6px;
+  flex: 1;
+  display: flex;
+  height: 30px;
+  width: 100%;
+}
+
+.search-input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font: 1.4rem;
+  color: var(--text-color);
+  padding: 0 16px;
+  border-radius: 6px;
+}
+
+.btn-search{
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 6px;
+  margin-left: 15px;
+  position: relative;
+  text-align: center;
+  border-color: var(--border-color);
+}
+
+.btn-search .fa-search
+{
+  font-size: 1rem;
+}
+
+.btn-search:hover{
+  cursor: pointer;
+  background-color: var(--border-color);
+}
+
+.navbar {
+  background-color: rgb(40, 40, 40)!important;
+}
+.navbar li a {
+    color: white !important;
+}
+.navbar li a:hover {
+    color: black !important;
+}
+.carousel-inner img {
+	width: 100%;
+}
+
+
+.separate{
+  border: 1px solid var(--white-color); 
+  border-radius: 6px;
+  margin: 1px;
+}
+
+// Carousel
+
+.carousel-inner img {
+  max-height: 425px;
+	width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item{
+  box-sizing: border-box;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+}
+
+.carousel-caption h1 {
+	font-size: 400%;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 15px #000;
+}
+
+.carousel-caption h3 {
+	font-size: 200%;	
+	text-shadow: 2px 2px 10px #000;
+}
+
+//rating
+.rating span{
+  color: #f0c040;
+  margin: 0.1rem;
+}

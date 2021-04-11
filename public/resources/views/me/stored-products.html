@@ -1,0 +1,106 @@
+<div class="container mt-4">
+    <div>
+      <h3>My products</h3>
+      <a href="/me/trash/products">Trash ({{deleteCount}})</a>
+
+      <div class="mt-4 d-flex align-items-center">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Chose all
+          </label>
+        </div>
+
+        <select class="form-control form-control-sm checkbox-select-all-options" id="">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <button class="btn btn-primary btn-sm disabled">Xóa</button>
+      </div>
+    </div>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên sản phẩm </th>
+                <th scope="col">Mô tả</th>
+                <th scope="col" colspan="2">Thời gian tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>@{{this.createdAt}}</td>
+                    <td>
+                        <a href="/products/{{this._id}}/edit" class="btn btn-link">Sửa</a>
+                        <a href="/products/{{this._id}}/edit" class="btn btn-link" data-toggle="modal" data-id="{{this._id}}" data-target="#delete-product-modal">Xóa</a>
+                    </td>
+            </tr>
+            {{else}}
+            <tr>
+              <td colspan="5" class="text-center">
+                Không có dữ liệu
+                <a href="/products/create">Thêm sản phẩm</a>
+              </td>  
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+{{!-- confirm delete --}}
+<div id="delete-product-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa sản phẩm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này không???</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-product" type="button" class="btn btn-danger">Xóa</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Delete hidden form --}}
+<form name="delete-product-form" method="POST">
+
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var producId;
+        var deleteForm = document.forms['delete-product-form'];
+        var btnDeleteProduct = document.getElementById('btn-delete-product');
+
+        //when dialog confirm clicked
+        $('#delete-product-modal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            producId = button.data('id');
+        });
+
+        //when delete product btn clicked
+        btnDeleteProduct.onclick = function () {
+            deleteForm.action = '/products/' + producId + '?_method=DELETE';
+            deleteForm.submit();
+        }
+   
+    });
+
+
+   
+</script>

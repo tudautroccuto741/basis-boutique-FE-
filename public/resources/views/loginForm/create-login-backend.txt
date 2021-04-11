@@ -1,0 +1,5 @@
+1. create /login api
+2. check email and password
+3. install dotenv
+4. return token and data
+7. test is using postman
