@@ -17,37 +17,393 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
     
 </head>
-<header>
-	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-	<div class="container-fluid">
-		<a class="navbar-branch" href="/">
-			<img class="img-logo" src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.6435-9/172299181_1026120891250593_7005106328517532554_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Rjl1RPdoqKwAX9l2D-v&_nc_ht=scontent.fsgn5-6.fna&oh=c3b8a3a6a025aada8364f9fcb3b22458&oe=6098EE3D">
-		</a>
-		<div class="search-box">
-			<input class="search-input" type="text" placeholder="Tìm kiếm">
-			<button class="btn-search">
-				<i class="fas fa-search white"></i>
-			</button>
-		</div>	
-		<button class="navbar-toggler" type="button" data-toggle="collapse" 
-			data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item separate">
-					<a class="nav-link" href="/public/resources/views/loginForm/login.html">Đăng nhập</a>
-				</li>
-				<li class="nav-item separate">
-					<a class="nav-link" href="/user/register">Đăng ký</a>
-				</li>	
-				<li class="nav-item">
-					<a class="nav-link" href="/">
-						<i class="fas fa-shopping-cart"></i>
-					</a>
-				</li>
-			</ul>
+	<div id="plm-topbar" class="topbar">
+		<div class="container">
+			<div class="topbar--inner">
+				<div class="topbar--inner-l">
+					<div class="marquee">
+						<marquee>Mua 2 áo Polo tặng 1 quần Boxer - Mua 3 áo Polo tặng 1 áo Cotton</marquee> 
+					</div>
+				</div>
+				
+				
+				<div class="topbar--inner-r">
+					<ul>
+						
+						<li class="tracking">
+							<a href="https://poloman.vn/pages/kiem-tra-don-hang">
+								<img src="https://file.hstatic.net/200000032664/file/icontop2_ad12174bc93641689e1c72328bb1026e.svg" class="icon">
+								<span>Kiểm tra đơn hàng</span>
+							</a>
+						</li>
+						
+						
+						<li class="dollar">
+							<a href="/">
+								<img src="https://file.hstatic.net/200000032664/file/icontop1_d3511d8f72654a87b528cd5035b3be7c.svg" class="icon">
+								<span>Polocoin</span>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				
+			</div>
 		</div>
 	</div>
-</nav>
-</header>
+
+	<header id="plm-header" class="header">
+		<div class="plm-header--t">
+			<div class="container">
+				<div class="header-t--inner">
+					<div class="header-logo">
+						
+						<a href="https://poloman.vn" itemprop="url">
+							<h1 class="logo fade-box">
+								<img itemprop="logo" src="/public/img/logoBB/basic-logo.jpg"/>
+							</h1>
+						</a>
+						
+					</div>
+					<div class="header-search">
+						<div class="search-box wpo-wrapper-search">
+							<form action="/search" class="ultimate-search">
+								<div class="wpo-search-inner">
+									<input type="hidden" name="type" value="product" />
+									<input required id="inputSearchAuto" name="q" maxlength="40" autocomplete="off" class="searchinput input-search search-input" type="text" size="20" placeholder="Tìm kiếm sản phẩm...">
+								</div>
+								<button type="submit" class="btn-search" id="search-header-btn">
+									<svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 19.22 19.22" style="enable-background:new 0 0 19.22 19.22;" xml:space="preserve"><g><path class="st5" d="M7.99,1.66c-3.49,0-6.33,2.84-6.33,6.33c0,3.49,2.84,6.33,6.33,6.33c3.49,0,6.33-2.84,6.33-6.33   C14.32,4.5,11.48,1.66,7.99,1.66z M7.99,15.98C3.58,15.98,0,12.39,0,7.99C0,3.58,3.58,0,7.99,0s7.99,3.58,7.99,7.99   C15.98,12.39,12.39,15.98,7.99,15.98z"/><path class="st5" d="M18.39,19.22c-0.21,0-0.43-0.08-0.59-0.24l-5.23-5.23c-0.33-0.32-0.33-0.85,0-1.17c0.32-0.32,0.85-0.32,1.17,0   l5.23,5.23c0.32,0.32,0.32,0.85,0,1.17C18.81,19.13,18.6,19.22,18.39,19.22z"/></g></svg>
+									Tìm kiếm
+								</button>  
+							</form>
+						</div>
+						<div id="ajaxSearchResults" class="smart-search-wrapper ajaxSearchResults" style="display: none">
+							<div class="resultsContent"></div>
+						</div>
+					</div>
+					<div class="header-action-list">
+						<div class="header-action--acc">
+							<div class="action-acc" id="site-acc-handle">
+								
+								
+								
+								<a href="/account">Tú Nguyên</a>
+								<span>/</span>
+								<a href="/account/logout">Đăng xuất</a>
+								
+								
+								
+							</div>
+						</div>
+						<div class="header-action--search-mb">
+							<div id="site-search-handle">
+								<a href="/search">
+									<svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 19.22 19.22" style="enable-background:new 0 0 19.22 19.22;" xml:space="preserve"><g><path class="st5" d="M7.99,1.66c-3.49,0-6.33,2.84-6.33,6.33c0,3.49,2.84,6.33,6.33,6.33c3.49,0,6.33-2.84,6.33-6.33   C14.32,4.5,11.48,1.66,7.99,1.66z M7.99,15.98C3.58,15.98,0,12.39,0,7.99C0,3.58,3.58,0,7.99,0s7.99,3.58,7.99,7.99   C15.98,12.39,12.39,15.98,7.99,15.98z"/><path class="st5" d="M18.39,19.22c-0.21,0-0.43-0.08-0.59-0.24l-5.23-5.23c-0.33-0.32-0.33-0.85,0-1.17c0.32-0.32,0.85-0.32,1.17,0   l5.23,5.23c0.32,0.32,0.32,0.85,0,1.17C18.81,19.13,18.6,19.22,18.39,19.22z"/></g></svg>
+								</a>
+							</div>
+						</div>
+						<div class="header-action--cart">
+							<div id="site-cart-handle">
+								<a href="javascript:void(0)">
+									<span class="cart-menu">
+										<svg  class="icon icon--cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 29.73 27.19" style="enable-background:new 0 0 29.73 27.19;" xml:space="preserve"><g><path class="st4" d="M2.72,25.13h24.29L22.38,8.62H7.34L2.72,25.13z M29.73,27.19H0L5.77,6.55h18.17L29.73,27.19z"/><path class="st4" d="M19.63,14.2h-2.06V4.09c0-1.65-1.7-2.09-2.7-2.09c-1,0-2.7,0.44-2.7,2.09V14.2H10.1V4.09   c0-5.45,9.53-5.45,9.53,0V14.2z"/></g></svg>
+										<span class="count-holder"><span class="count">0</span></span>
+									</span>	
+								</a>
+							</div>
+						</div>
+						<div class="header-action--menu-mb">    
+							<div id="site-menu-handle">
+								<a href="javascript:void(0);">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 409.6 409.6" style="enable-background:new 0 0 409.6 409.6;" xml:space="preserve"><g><g><path d="M392.533,17.067H17.067C7.641,17.067,0,24.708,0,34.133S7.641,51.2,17.067,51.2h375.467    c9.426,0,17.067-7.641,17.067-17.067S401.959,17.067,392.533,17.067z"/></g></g><g><g><path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467    c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z"/></g></g><g><g><path d="M392.533,358.4H17.067C7.641,358.4,0,366.041,0,375.467s7.641,17.067,17.067,17.067h375.467    c9.426,0,17.067-7.641,17.067-17.067S401.959,358.4,392.533,358.4z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="plm-header--b">    
+			<div class="container">
+				<nav id="nav-menu" class="nav-menu">
+					<ul class="menu__list menu__list--one nav-menu--linklist">
+						<!-- megamenu -->
+						
+	
+	
+	
+						<li class="menu__item--dropdown  ">
+							<a href="/collections/hang-moi" class="menu__link">
+								
+								<span class="icon icon--menu icon--menu-1">
+									<img src="https://file.hstatic.net/200000032664/file/icon-menu1_9861bfcdb00643cba02c5e5c6d446e16.svg" class="icon">
+								</span>
+								
+								<span>HÀNG MỚI</span>
+							</a>
+						</li>
+						
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	<li class="menu__item--mega ">
+		<a href="/collections/ban-chay-nhat" class="menu__link 3">
+			
+			<span class="icon icon--menu icon--menu-2">
+				<img src="https://file.hstatic.net/200000032664/file/icon-menu2_0610fcddaedc404ebd91b7a594944674.svg" class="icon">
+			</span>
+			
+			<span data="HOT">BÁN CHẠY NHẤT</span>
+			<svg class="icon icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+				<path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+			</svg>
+		</a>
+		<div class="menu__content">
+			<div class="menu-flex">
+				<ul class="menu__list menu__list--second">
+					
+						<li class="menu__item">
+							<a href="/products/polo-basic" class="menu__link">Áo Polo Trơn</a>
+						</li>
+					
+						<li class="menu__item">
+							<a href="/collections/ao-polo-phoi" class="menu__link">Áo Polo Phối</a>
+						</li>
+					
+						<li class="menu__item">
+							<a href="/collections/ao-polo-theu" class="menu__link">Áo Polo Thêu</a>
+						</li>
+					
+						<li class="menu__item">
+							<a href="/collections/ao-polo-in" class="menu__link">Áo Polo In</a>
+						</li>
+					
+						<li class="menu__item">
+							<a href="/products/t-shirt-100-cotton" class="menu__link">Áo Thun 100% Cotton</a>
+						</li>
+					  
+				</ul>
+				<ul class="menu__list menu_list_img">
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="" title="Áo Polo Trơn" >
+							<img src="https://file.hstatic.net/200000032664/file/631a7621_ef62129f62de4774becea7214fcde582.jpg" class="" alt="Áo Polo Trơn">
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="" title="Áo Polo Cao Cấp" >
+							<img src="https://file.hstatic.net/200000032664/file/631a7412_2830a656f5a143889b890a746a528447.jpg" class=""  alt="Áo Polo Cao Cấp">
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="" title="Áo Polo Thêu" >
+							<img src="https://file.hstatic.net/200000032664/file/631a7954_d472d13561204a2891dd713ab4bc1210.jpg"class="" alt="Áo Polo Thêu">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+						
+	
+	
+	
+						<li class="menu__item--dropdown  ">
+							<a href="/collections/giam-gia" class="menu__link">
+								
+								<span class="icon icon--menu icon--menu-3">
+									<img src="https://file.hstatic.net/200000032664/file/icon-menu3_3abf1652467c449e9fbfe088ff88d5af.svg" class="icon">
+								</span>
+								
+								<span>GIẢM GIÁ</span>
+							</a>
+						</li>
+						
+	
+	
+	
+						<li class="menu__item--dropdown  active">
+							<a href="/" class="menu__link"> 
+								
+								<span class="icon icon--menu icon--menu-4">
+									<img src="https://file.hstatic.net/200000032664/file/icon-menu4_7027567a34ae4dcbaf364624b7e7f2a1.svg" class="icon">
+								</span>
+								
+								<span>CHÍNH SÁCH - HƯỚNG DẪN</span>
+								<svg class="icon icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+									<path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+								</svg>
+							</a>
+							<ul class="menu__list--dropdown">
+								<li class="menu__item--dropdown">
+									<a href="/pages/chinh-sach-doi-tra-1" class="menu__link"> 
+										Chính Sách Đổi Trả
+									</a>
+								</li>
+	
+															<li class="menu__item--dropdown">
+									<a href="/pages/chinh-sach-bao-hanh" class="menu__link"> 
+										Chính Sách Bảo Hành
+									</a>
+								</li>
+	
+															<li class="menu__item--dropdown">
+									<a href="/" class="menu__link"> 
+										Hướng Dẫn Đặt Hàng
+									</a>
+								</li>
+	
+															<li class="menu__item--dropdown">
+									<a href="/pages/huong-dan-chon-size" class="menu__link"> 
+										Hướng Dẫn Chọn Size
+									</a>
+								</li>
+	
+															<li class="menu__item--dropdown">
+									<a href="/pages/khach-hang-than-thiet" class="menu__link"> 
+										Khách Hàng Thân Thiết
+									</a>
+								</li>
+	
+								
+							</ul>
+						</li>
+						
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	<li class="menu__item--mega ">
+		<a href="/blogs/news" class="menu__link 0">
+			
+			<span class="icon icon--menu icon--menu-5">
+				<img src="https://file.hstatic.net/200000032664/file/icon-menu4_7027567a34ae4dcbaf364624b7e7f2a1.svg" class="icon">
+			</span>
+			
+			<span >BST/Blog</span>
+			<svg class="icon icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+				<path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+			</svg>
+		</a>
+		<div class="menu__content menu__list-blog">
+			<div class="menu-flex">
+				<ul class="menu__list menu__list--second">
+					
+					
+					<li class="menu__item">
+						<a href="/collections/hang-moi" class="menu__link">Elegant & Youthful</a>
+					</li>
+					
+					
+					
+					<li class="menu__item">
+						<a href="/collections/ban-chay-nhat" class="menu__link">Holiday January</a>
+					</li>
+					
+					
+					
+					<li class="menu__item">
+						<a href="/collections/ao-polo-phoi" class="menu__link">Rebellion Style 2021</a>
+					</li>
+					
+					
+					
+					<li class="menu__item">
+						<a href="/collections/hang-moi" class="menu__link">Tết Collection</a>
+					</li>
+					
+					  
+				</ul>
+				<ul class="menu__list menu_list_posts">
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/3-ly-do-nguoi-co-thu-nhap-cao-thuong-chon-mac-ao-polo" title="3 Lý Do Người Có Thu Nhập Cao Thường Chọn Mặc Áo Polo" >
+							<img src="https://file.hstatic.net/200000032664/file/3_ly_do_nguoi_co_thu_nhap_cao_thuong_chon_mac_ao_polo_964066b839be4a238c4ad36075a8a6ba.jpg" class="" alt="3 Lý Do Người Có Thu Nhập Cao Thường Chọn Mặc Áo Polo">
+							<h3>3 Lý Do Người Có Thu Nhập Cao Thường Chọn Mặc Áo Polo</h3>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/nguon-goc-cua-ao-polo-da-ton-tai-hon-100-nam" title="Nguồn Gốc Của Áo Polo Đã Tồn Tại Hơn 100 Năm!" >
+							<img src="https://file.hstatic.net/200000032664/file/nguon_goc_cua_ao_polo__vuong__1_24a83297c9834a2ea56b9a29803f5371.jpg" class=""  alt="Nguồn Gốc Của Áo Polo Đã Tồn Tại Hơn 100 Năm!">
+							<h3>Nguồn Gốc Của Áo Polo Đã Tồn Tại Hơn 100 Năm!</h3>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/4-sai-lam-99-nam-gioi-mac-phai-khi-mac-ao-polo" title="4 Sai Lầm 99% Nam Giới Mắc Phải Khi Mặc Áo Polo" >
+							<img src="https://file.hstatic.net/200000032664/file/4_sai_lam_khi_phoi_ao_polo_-__vuong__66c896bca0c94ff1a5352f8ed0a26c1e.jpg"class="" alt="4 Sai Lầm 99% Nam Giới Mắc Phải Khi Mặc Áo Polo">
+							<h3>4 Sai Lầm 99% Nam Giới Mắc Phải Khi Mặc Áo Polo</h3>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/https-poloman-vn-blogs-news-5-tips-phoi-ao-polo-duoc-cac-fashionista-hang-dau-tiet-lo" title="5 TIPS Phối Áo Polo Được Các Fashionista Hàng Đầu Tiết Lộ" >
+							<img src="https://file.hstatic.net/200000032664/file/5_tips_phoi_ao_polo_duoc_cac_fashionista_hang_dau_tiet_lo_cd9ff125ae2542bbac3fe2d2e0f57e56.jpg" class="" alt="5 TIPS Phối Áo Polo Được Các Fashionista Hàng Đầu Tiết Lộ">
+							<h3>5 TIPS Phối Áo Polo Được Các Fashionista Hàng Đầu Tiết Lộ</h3>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/ban-se-kho-dien-ao-thun-chuan-cach-neu-bo-qua-6-meo-nay" title="Bạn Sẽ Khó Diện Áo Thun Chuẩn Cách Nếu Bỏ Qua 6 Mẹo Này" >
+							<img src="https://file.hstatic.net/200000032664/file/ban_se_kho_dien_ao_thun_chuan_cach_neu_bo_qua_6_meo_nay_614ba311f4c047819820c40917c4cb7d.jpg" class=""  alt="Bạn Sẽ Khó Diện Áo Thun Chuẩn Cách Nếu Bỏ Qua 6 Mẹo Này">
+							<h3>Bạn Sẽ Khó Diện Áo Thun Chuẩn Cách Nếu Bỏ Qua 6 Mẹo Này</h3>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link fade-box effect-img" href="https://poloman.vn/blogs/news/cuoc-cach-mang-vi-dai-trong-ky-nguyen-ao-polo-nu" title="Cuộc Cách Mạng Vĩ Đại Trong Kỷ Nguyên Áo Polo Nữ" >
+							<img src="https://file.hstatic.net/200000032664/file/cuoc_cach_mang_vi_dai_trong_ky_nguyen_ao_polo_nu_f77bb3ef856e4b0b816e7c2024e194be.jpg"class="" alt="Cuộc Cách Mạng Vĩ Đại Trong Kỷ Nguyên Áo Polo Nữ">
+							<h3>Cuộc Cách Mạng Vĩ Đại Trong Kỷ Nguyên Áo Polo Nữ</h3>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+						
+	
+	
+	
+						<li class="menu__item--dropdown  ">
+							<a href="/pages/khach-hang-noi-gi" class="menu__link">
+								
+								<span class="icon icon--menu icon--menu-6">
+									<img src="https://file.hstatic.net/200000032664/file/icon-menu4_7027567a34ae4dcbaf364624b7e7f2a1.svg" class="icon">
+								</span>
+								
+								<span>KHÁCH HÀNG NÓI GÌ?</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
